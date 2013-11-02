@@ -9,6 +9,9 @@ module Magnum
         team  = options.delete(:team)
         token = options.delete(:token)
 
+        # Set default username, otherwise webhookbot
+        options[:username] ||= "Magnum CI"
+
         @client = SlackNotify::Client.new(team, token, options)
       end
 
