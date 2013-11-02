@@ -3,3 +3,4 @@ Commit: <https://github.com/sosedoff/slack-notify/commit/6f102f22caac46945e16ada
 Diff: <https://github.com/sosedoff/slack-notify/compare/42f7b7cdfc4b...6f102f22caac>
 Author: Dan Sosedoff
 Duration: 11s
+<https://magnum-ci.com/projects/201/builds/8683|View Build>
