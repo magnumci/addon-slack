@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe Magnum::Addon::Slack do
+describe Magnum::Addons::Slack do
   let(:options) do
     { team: "team", token: "token" }
   end

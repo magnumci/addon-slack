@@ -1,5 +1,5 @@
 module Magnum
-  module Addon
+  module Addons
     class Slack
       VERSION = "0.1.0"
     end

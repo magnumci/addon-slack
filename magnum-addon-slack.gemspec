@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'magnum/addon/slack/version'
+require 'magnum/addons/slack/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "magnum-addon-slack"
-  spec.version       = Magnum::Addon::Slack::VERSION
+  spec.version       = Magnum::Addons::Slack::VERSION
   spec.authors       = ["Dan Sosedoff"]
   spec.email         = ["dan.sosedoff@gmail.com"]
   spec.description   = %q{Slack notifier addon for Magnum CI}

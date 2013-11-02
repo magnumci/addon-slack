@@ -5,7 +5,7 @@ $:.unshift File.expand_path("../..", __FILE__)
 
 require "webmock/rspec"
 require "json"
-require "magnum/addon/slack"
+require "magnum/addons/slack"
 
 WebMock.disable_net_connect!
 

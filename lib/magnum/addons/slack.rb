@@ -1,9 +1,9 @@
-require "magnum/addon/slack/version"
+require "magnum/addons/slack/version"
 require "slack-notify"
 require "hashr"
 
 module Magnum
-  module Addon
+  module Addons
     class Slack
       def initialize(options={})
         team  = options.delete(:team)
