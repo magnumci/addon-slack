@@ -1,0 +1,21 @@
+ {
+   "id": 12345,
+   "project_id": 123,
+   "title": "[PASS] slack-notify #3 (master - 6f102f22) by Dan Sosedoff",
+   "number": 3,
+   "commit": "6f102f22caac46945e16ada4f50df29a70ab2799",
+   "author": "Dan Sosedoff",
+   "committer": "Dan Sosedoff",
+   "message": "Version bump: 0.1.1",
+   "branch": "master",
+   "state": "finished",
+   "status": "pass",
+   "result": 0,
+   "duration": 11.0,
+   "duration_string": "11s",
+   "commit_url": "https://github.com/sosedoff/slack-notify/commit/6f102f22caac46945e16ada4f50df29a70ab2799",
+   "compare_url": "https://github.com/sosedoff/slack-notify/compare/42f7b7cdfc4b...6f102f22caac",
+   "started_at": "2013-11-01T19:25:33-05:00",
+   "finished_at": "2013-11-01T19:25:44-05:00",
+   "build_url": "https://magnum-ci.com/projects/201/builds/8683"
+ }
