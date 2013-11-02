@@ -3,7 +3,6 @@ SimpleCov.start
 
 $:.unshift File.expand_path("../..", __FILE__)
 
-require "webmock"
 require "webmock/rspec"
 require "json"
 require "magnum/addon/slack"
