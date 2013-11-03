@@ -19,4 +19,17 @@ describe Magnum::Addons::Slack do
       addon.run(payload)
     end
   end
+
+  describe "#deliver" do
+    let(:addon) { described_class.new(options) }
+
+    before do
+      SlackNotify::Client.any_instance.stub(:notify) { true }
+    end
+
+    it "sends payload" do
+      result = addon.send(:deliver, fixture("success.txt"))
+      expect(result).to eq true
+    end
+  end
 end
