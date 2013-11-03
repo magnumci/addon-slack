@@ -1,19 +1,18 @@
-# magnum-addon-slack
+# Slack Addon
 
-[Slack](slack.com) notifier addon for Magnum CI
+Send [Magnum CI](http://magnum-ci.com) build notifications to a [Slack](http://slack.com) channel
 
 ## Usage
 
-Load:
+Example:
 
 ```ruby
-require "magnum/addon/slack"
-```
+require "magnum/addons/slack"
 
-Send notification:
-
-```ruby
+# Initialize addon
 addon = Magnum::Addon::Slack.new(team: "team", token: "token")
+
+# Send build payload
 addon.run(build_payload)
 ```
 
@@ -21,7 +20,14 @@ addon.run(build_payload)
 
 Available options:
 
-- `team` - Slack team name (https://<team>.slack.com)
-- `token` - Slack access token
-- `username` - Notifier username, default is `webhooksbot`
-- `channel` - Notifier channel. Default is `#general`
+- `team`     - Slack team name (https://<team>.slack.com)
+- `token`    - Slack access token
+- `channel`  - Notifier channel. Default is `#general`
+
+## Testing
+
+Execute test suite:
+
+```
+bundle exec rake test
+```
