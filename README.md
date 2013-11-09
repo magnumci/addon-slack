@@ -20,7 +20,7 @@ addon.run(build_payload)
 
 Available options:
 
-- `team`     - Slack team name (https://<team>.slack.com)
+- `team`     - Slack team name (https://TEAM.slack.com)
 - `token`    - Slack access token
 - `channel`  - Notifier channel. Default is `#general`
 
