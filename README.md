@@ -31,3 +31,9 @@ Execute test suite:
 ```
 bundle exec rake test
 ```
+
+## License
+
+Copyright (c) 2013 Dan Sosedoff, Magnum CI
+
+MIT License
