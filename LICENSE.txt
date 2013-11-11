@@ -1,4 +1,4 @@
-Copyright (c) 2013 Dan Sosedoff
+Copyright (c) 2013 Magnum CI <opensource@magnum-ci.com>
 
 MIT License
 

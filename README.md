@@ -34,6 +34,6 @@ bundle exec rake test
 
 ## License
 
-Copyright (c) 2013 Dan Sosedoff, Magnum CI
+Copyright (c) 2013 Magnum CI
 
 MIT License
