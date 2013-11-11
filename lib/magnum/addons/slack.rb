@@ -1,4 +1,5 @@
 require "magnum/addons/slack/version"
+require "magnum/addons/slack/error"
 require "magnum/addons/slack/message"
 
 require "slack-notify"
@@ -8,13 +9,10 @@ module Magnum
   module Addons
     class Slack
       def initialize(options={})
-        team  = options.delete(:team)
-        token = options.delete(:token)
+        @team  = options[:team]
+        @token = options[:token]
 
-        # Set default username, otherwise webhookbot
-        options[:username] ||= "magnum-ci"
-
-        @client = SlackNotify::Client.new(team, token, options)
+        validate_options
       end
 
       def run(build)
@@ -24,8 +22,17 @@ module Magnum
 
       private
 
+      def validate_options
+        raise Error, "Team name required" if @team.nil?
+        raise Error, "Token required" if @token.nil?
+      end
+
+      def client
+        @client ||= SlackNotify::Client.new(@team, @token, username: "magnum-ci")
+      end
+
       def deliver(message)
-        @client.notify(message)
+        client.notify(message)
       end
     end
   end

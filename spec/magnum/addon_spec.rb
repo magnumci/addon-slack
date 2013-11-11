@@ -1,11 +1,27 @@
 require "spec_helper"
 
 describe Magnum::Addons::Slack do
-  let(:options) do
-    { team: "team", token: "token" }
-  end
-
   let(:payload) { JSON.load(fixture("build.json")) }
+  let(:options) { Hash(team: "team", token: "token") }
+
+  describe "#initialize" do
+    it "requires team name" do
+      expect { described_class.new }.
+        to raise_error Magnum::Addons::Slack::Error, "Team name required"
+    end
+
+    it "requires token" do
+      expect { described_class.new(team: "team") }.
+        to raise_error Magnum::Addons::Slack::Error, "Token required"
+    end
+
+    context "with valid arguments" do
+      it "does not raise error" do
+        expect { described_class.new(options) }.
+          not_to raise_error
+      end
+    end
+  end
 
   describe "#run" do
     let(:addon) { described_class.new(options) }
