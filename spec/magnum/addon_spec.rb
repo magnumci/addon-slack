@@ -26,6 +26,10 @@ describe Magnum::Addons::Slack do
   describe "#run" do
     let(:addon) { described_class.new(options) }
 
+    before do
+      SlackNotify::Client.any_instance.stub(:notify) { true }
+    end
+
     it "requires hash argument" do
       expect { addon.run(nil) }.to raise_error "Hash required"
     end
