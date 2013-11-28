@@ -23,7 +23,6 @@ module Magnum
           end
 
           lines << "Author: #{build.author}"
-          lines << "Duration: #{build.duration_string}"
           lines << "<#{build.build_url}|View Build>"
 
           lines.join("\n")

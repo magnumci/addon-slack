@@ -33,10 +33,6 @@ describe Magnum::Addons::Slack::Message do
       expect(result).to include "Author: Dan Sosedoff"
     end
 
-    it "includes duration" do
-      expect(result).to include "Duration: 11s"
-    end
-
     it "includes view build url" do
       expect(result).to include "<https://magnum-ci.com/projects/201/builds/8683|View Build>"
     end
