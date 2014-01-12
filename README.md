@@ -2,6 +2,8 @@
 
 Send [Magnum CI](http://magnum-ci.com) build notifications to a [Slack](http://slack.com) channel
 
+![Build Status](https://magnum-ci.com/status/3c4493d923cf28c3aae0691fc6754965.png)
+
 ## Usage
 
 Example:
