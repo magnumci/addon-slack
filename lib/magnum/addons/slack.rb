@@ -8,7 +8,7 @@ require "hashr"
 module Magnum
   module Addons
     class Slack
-      def initialize(options={})
+      def initialize(options = {})
         @team  = options[:team]
         @token = options[:token]
 
@@ -24,7 +24,7 @@ module Magnum
 
       def validate_options
         raise Error, "Team name required" if @team.nil?
-        raise Error, "Token required" if @token.nil?
+        raise Error, "Token required"     if @token.nil?
       end
 
       def client
